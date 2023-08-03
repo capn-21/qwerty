@@ -1,0 +1,1537 @@
+mongodb+srv://chalkeom99:Jnpetit99@cluster0.amgs5w7.mongodb.net/?retryWrites=true&w=majority
+
+
+# 1. Write a program to perform following operations on list
+
+# 1. Sum all the items in a list
+a = [1, -2, 5, 6, 10, 2, -3, 0, 6]
+
+# 1. Sum all the items in a list
+print("Sum:", sum(a))
+
+# 2. Get the largest number from a list
+print("largest:", max(a))
+
+# 3. Remove duplicates from a list
+print("Removed duplicates:", list(set(a)))
+
+# 4. Separate positive and negative number from a list.
+positive = []
+negative = []
+
+for x in a:
+    if (x >= 0):
+
+        positive.append(x)
+    else:
+        negative.append(x)
+
+print("positive :", positive)
+print("negative :", negative)
+
+# 5. Filter even and odd number from a list.
+even = []
+odd = []
+for i in a:
+    if i % 2 == 0:
+
+        even.append(i)
+    else:
+        odd.append(i)
+
+print("seperated even numbers:", even)
+print("seperated odd numbers:", odd)
+# -----------------------------------------------------------------------------
+print("\n")
+# 2. Write a program to perform following operations on string
+# 1. Reverse string.
+
+s = "omkar"[::-1]
+
+print(s)
+
+# 2. Count vowels and consonants in a string
+
+v = "omkarchalke"
+print("String= ", v)
+vowels = 0
+consonants = 0
+for i in range(len(v)):
+    if v[i] == "a" or v[i] == "e" or v[i] == "i" or v[i] == "o" or v[i] == "u":
+
+        vowels += 1
+    else:
+
+        consonants += 1
+
+print("Number of Vowels :", vowels, " number of consonants : ", consonants)
+
+# 3. Count the number of letters in a word.
+
+word = "MesImcc"
+
+print("length of word:", word, "=", len(word))
+
+# 4. Convert lower letter to upper and upper letter to lower in a string
+
+l = "Mes Imcc College"
+print(l)
+new = ""
+
+for i in range(len(l)):
+    if (l[i].isupper()):
+
+        new += l[i].lower()
+    elif (l[i].islower()):
+
+        new += l[i].upper()
+    else:
+        new += l[i]
+
+print(new)
+
+# 5. Count lower, upper, numeric and special characters in a string.
+
+lower = 0
+upper = 0
+numeric = 0
+special = 0
+sc = "!@#$%^&*()-+?_=,<>/"
+p = "Omkarchalke123@gmail.com"
+print(p)
+for i in range(len(p)):
+    if (p[i].islower()):
+        lower += 1
+    elif (p[i].isupper()):
+        upper += 1
+    elif (p[i].isnumeric()):
+        numeric += 1
+    elif (x in sc for x in p):
+        special += 1
+
+print('lower:', lower)
+print('upper:', upper)
+print('numeric:', numeric)
+print('special:', special)
+
+# -----------------------------------------------------------------------------
+print("\n")
+# 3. Write a program to perform following operations on dictionary
+
+# 1. Check whether a given key exists in a dictionary or not.
+
+dic = {
+    "jan": "january",
+    "mar": "march",
+    'feb': "february",
+    'apr': "april"
+}
+check = "mar"
+
+if (check in dic):
+    print(check, "exists in the dictionary")
+else:
+    print(check, "not found")
+
+# 2. Iterate over dictionary items using for loop.
+
+for i in dic:
+    print(i)
+
+# 3. Concatenate two dictionaries to create one.
+
+dic1 = {
+    1: "car",
+    2: "bike"
+}
+
+dic2 = {
+    3: "truck",
+    4: "train"
+}
+
+dic3 = {}
+dic3.update(dic1)
+dic3.update(dic2)
+
+print(dic3)
+
+# 4. Sum all the values of a dictionary.
+
+t = {
+    "jan": 2,
+    "mar": 3,
+    'feb': 2,
+    'apr': 3
+
+}
+
+print("sum of values:", sum(t.values()))
+
+# 5. Get the maximum and minimum value of dictionary
+
+h = {
+    "jan": 2,
+    "mar": 3,
+    'feb': 6,
+    'apr': 4
+
+}
+
+print(max(h.values()))
+print(min(h.values()))
+
+# -----------------------------------------------------------------------------
+print("\n")
+
+# 4. Write a program to print
+
+# 1. First 10 natural numbers
+i = 1
+print("natural numbers: ", end="")
+while i < 11:
+    print(i, " ", end="")
+    i += 1
+
+# 2. First 10 even numbers in reverse order
+ev = 0
+rev = []
+
+print("")
+for i in range(10):
+    if (i % 2 == 0):
+        rev.append(i)
+        ev += 1
+rev = rev[::-1]
+print(rev)
+
+# 3. Table of a number accepted from user
+#a=int(input("enter a number"))
+
+
+for i in range(11):
+
+
+    #print(a," x ",i ,"=",a*i)
+    i+=1
+
+# 4. First 10 prime numbers
+print("prime numbers : ",end="")
+n = 10
+c = 2
+while n!=0:
+  for i in range(2,c):
+    if c%i==0:
+      break
+  else:
+    print(c,end=" ")
+    n-=1
+  c+=1
+
+#5. Write a program to print following patterns
+print()
+for j in range(1,5):
+    for i in range(1,j+1):
+        print(i,end=" ")
+    print()
+
+print()
+
+for j in range(1,5):
+    for i in range(5-j):
+        print("*",end="")
+    print()
+
+
+print()
+for i in reversed(range(6)):
+
+    for j in range(i):
+        print(i,end="")
+
+    print()
+
+print()
+n=5
+num =65
+for j in range(0,n):
+    for i in range(0,j+1):
+        ch=chr(num)
+        print(ch,end="")
+        num+=1
+    print()
+
+
+
+import usermodule
+import math,random,datetime
+
+# 1. Write a program to demonstrate Nested function
+def outer():
+
+    a=39
+    def inner():
+        print("printing a from a nested function:",a)
+
+    inner()
+
+outer()
+
+print()
+
+# 2. Write a program to calculate factorial of a given number using recrursion
+
+def fact(n):
+    if n==1:
+        return 1
+    else:
+        return n*fact(n-1)
+
+
+print("recursive factorial:",fact(5))
+
+print()
+# 3. Write a program to create decorators and generators
+print("decorator:")
+def userdecorator(fun):
+   def wrapper():
+      print("before calling the function")
+      fun()
+      print("after calling the function")
+   return wrapper
+
+@userdecorator
+def printing():
+   print("normal function")
+printing()
+
+
+print()
+print("generator:")
+
+def numberlist():
+
+    n=1
+
+    while n<11:
+        yield n
+        n+=1
+
+val=numberlist()
+
+for i in val:
+    print(i)
+
+print()
+#4. Create two different user defined modules and access respective functions from one file to another
+
+print("imported module:",end="")
+usermodule.addition(23,34)
+
+print()
+#5. write a program to access buil in functions available in math, random and datetime modules
+
+
+print("math module: ",math.factorial(3))
+
+print("random module: ",random.randint(1,100))
+
+print("date module: ",datetime.date.today())
+
+
+#1. Write Python program to read file word by word
+import os
+import ast
+import pickle
+print("1. Write Python program to read file word by word\n")
+f=open("ass3.txt","w")
+f.write("This is a first text file: \nthis is line number 2 \nthis is line number 3")
+f.close()
+
+f=open("ass3.txt","r")
+
+text=f.read()
+
+for i in text.split():
+    print(i)
+
+f.close()
+
+
+#2. Write Python program to read character by character from a file
+print("\n2.Write Python program to read character by character from a file\n")
+
+f=open("ass3.txt","r")
+
+while True:
+    c = f.read(1)
+    if not c:
+        print("End of file")
+        break
+    print(c)
+f.close()
+
+
+#3. Write Python program to Get number of characters, words, spaces and lines in a file
+print("\n3. Write Python program to Get number of characters, words, spaces and lines in a file\n")
+
+
+
+
+
+f=open("ass3.txt","r")
+
+count = 0
+while True:
+
+    char = f.read(1)
+
+    if char.isspace():
+        count += 1
+    if not char:
+        break
+print("Number of spaces :",count)
+f.close()
+
+
+f=open("ass3.txt","r")
+words=0
+lines=0
+character=0
+
+
+for i in f:
+    lines += 1
+
+    character = len(i)
+
+    words+=len(i.split())
+
+
+
+
+
+print("Number of words :",words)
+print("Number of lines :",lines)
+print("Number of character :",character)
+
+f.close()
+
+
+
+
+
+
+#4. Write Python program to Count the Number of occurrences of a key-value pair in a text file
+print("\n4. Write Python program to Count the Number of occurrences of a key-value pair in a text file\n")
+
+
+f=open("ass3keyvalue.txt","w")
+
+f.write("div:A \ndiv:B \ndiv:A \ndiv:E \ndiv:D \ndiv:C \ndiv:B \ndiv:B")
+print("written")
+f.close()
+f=open("ass3keyvalue.txt","r")
+
+
+d = dict()
+
+for res in f:
+
+    res = res.strip()
+
+    res = res.lower()
+
+
+    lines = res.split()
+
+    for line in lines:
+
+        if line in d:
+
+
+            d[line] = d[line] + 1
+        else:
+
+            d[line] = 1
+
+f.close()
+
+for key in list(d.keys()):
+    print("The count of {} is {}".format(key, d[key]))
+
+#5. Write Python program to Find ‘n’ Character Words in a Text File
+print("\n5. Write Python program to Find ‘n’ Character Words in a Text File\n")
+
+
+f=open("ass3.txt","r")
+n=4
+print("words with length of n= 4")
+for i in text.split():
+    if(len(i)==n):
+        print(i)
+    else:
+        continue
+
+
+f.close()
+
+
+#6. Write Python program to Count number of lines in a text file in Python
+print("\n6. Write Python program to Count number of lines in a text file in Python\n")
+
+
+f=open("ass3.txt","r")
+linelength=0
+for i in f:
+    linelength+=1
+
+
+
+print("Number of lines in ass3.txt= ",linelength)
+f.close()
+
+#7. Write Python program to read List of Dictionaries from File
+print("\n7. Write Python program to read List of Dictionaries from File\n")
+
+
+import json
+
+filename = "ass3dict.txt"
+with open(filename, 'r') as file:
+    data = json.load(file)
+    print(data)
+
+
+
+#8. Write Python program to Append content of one text file to another
+print("\n8. Write Python program to Append content of one text file to another\n")
+
+f1=open("file1.txt","w")
+
+f1.write("This is file 1 content")
+
+
+f2=open("file2.txt","w")
+f2.write(" This is data from file 2 ")
+
+f1.close()
+f2.close()
+
+f1=open("file1.txt","a+")
+f2=open("file2.txt","r")
+
+f1.write(f2.read())
+
+f1.close()
+
+f1=open("file1.txt","r")
+
+
+print("reading files after appending",f1.read())
+
+#9. Write Python program to reverse the content of a file and store it in another file
+print("\n9. Write Python program to reverse the content of a file and store it in another file\n")
+
+
+
+f=open("ass3.txt","r")
+
+str=f.read()
+print(str[::-1])
+
+f2=open("reversed.txt","w")
+
+f2.write(str[::-1])
+
+f2.close()
+f1.close()
+f2=open("reversed.txt","r")
+print(f2.read())
+f2.close()
+
+
+#10.Write Python program to merge two files into a third file
+print("\n10.Write Python program to merge two files into a third file\n")
+
+
+f=open("ass3.txt","r")
+
+f2=open("reversed.txt","r")
+
+content1=f.read()
+content2=f2.read()
+
+merged=content1+content2
+
+f3=open("third.txt","w")
+
+f3.write(merged)
+
+f3.close()
+f3=open("third.txt")
+print(f3.read())
+
+
+Q. Write Python program to raise user defined exception
+class Myexe(Exception):
+ pass
+def check(value):
+ if (value<0):
+ raise Myexe("value must be more than 0")
+ else:
+ print("ok")
+check(-23)
+
+
+Q. Write Python program to demonstrate the use of try, except and finally block
+try:
+ x=324/0
+except ZeroDivisionError:
+ print("value of a should be 34")
+finally:
+ print("printing finally")
+ 
+ 
+ Q. Write Python program to demonstrate default except block
+try:
+ x=324/0
+except ZeroDivisionError:
+ print("zero error")
+ 
+ 
+ Q. Write Python program to handle multiple exceptions in single except block
+try :
+ f=open("game.txt","r")
+ a=12/0
+except(ZeroDivisionError,FileNotFoundError):
+ print("something went wrong")
+ 
+ 
+ Q.Write a program to create two threads and execute them parallelly. 
+ import threading
+
+def thread_function ( thread_name ) :
+    for i in range ( 5 ) :
+        print ( f"{thread_name}: {i}" )
+
+
+thread1 = threading.Thread ( target = thread_function , args = ("Thread1" ,) )
+thread2 = threading.Thread ( target = thread_function , args = ("Thread2" ,) )
+
+thread1.start ( )
+thread2.start ( )
+thread1.join ( )
+thread2.join ( )
+
+ 
+Q.Write a program to validate  1) URL 2) Email ID and 3) Password
+
+Write 3 different functions. 
+ 
+ import re
+def isValidURL(str):
+  regex = ("((http|https)://)(www.)?" +
+  "[a-zA-Z0-9@:%._\\+~#?&//=]" +
+  "{2,256}\\.[a-z]" +
+  "{2,6}\\b([-a-zA-Z0-9@:%" +
+  "._\\+~#?&//=]*)")
+  p = re.compile(regex)
+  if (str == None):
+    return False
+  if(re.search(p, str)):
+    return True
+  else:
+    return False
+
+url = "https://mespune.in/"
+if(isValidURL(url) == True):
+  print("Valid URL")
+else:
+  print("Invalid URL")
+  
+  
+  def checkemail(e):
+
+
+  pattern = re.compile("^[a-z0-9._]{3,}@[a-z]{3,}.[a-z]{2,}$")
+  return pattern.match(e)
+
+a = "ott@gmail.com"
+if checkemail(a):
+  print("valid email")
+else:
+  print("invalid")
+
+passwd = 'Ost@123'
+reg = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*#?&])[A-Zaz\d@$!#%*?&]{6,20}$"
+pat = re.compile(reg)
+mat = re.search(pat, passwd)
+if mat:
+  print("Password is valid.")
+else:
+  print("Password invalid !!")
+ 
+ 
+
+q.Write a program to perform CRUD operations using mongoDB shell and pycharm IDE 
+
+C-Create
+
+R-Read
+
+U-Update
+
+D-Delete
+
+
+1.C-Create
+
+import pymongo
+client=pymongo.MongoClient("mongodb+srv://chalkeom99:Jnpetit99@cluster0.amgs5w7.mongodb.net/?retryWrites=true&w=majority")
+db=client["mydata"]
+collection=db["Assignment"]
+data = {'name': 'Omkar', 'Roll No': '2201023', 'Div': 'A'}
+result = collection.insert_one(data)
+print(f"Created document ID: {result.inserted_id}")
+
+
+2.R-Read
+
+import pymongo
+client=pymongo.MongoClient("mongodb+srv://cfd99:pythoncrud@p
+crud.yvhau8o.mongodb.net/?retryWrites=true&w=majority")
+db=client["mydata"]
+collection=db["Assignment"]
+result=collection.find_one({"name":"sdfr"})
+print((result))
+
+ 3.Update
+
+import pymongo
+client=pymongo.MongoClient("mongodb+srv://c9:pythoncrud@p
+crud.yvhau8o.mongodb.net/?retryWrites=true&w=majority")
+db=client["mydata"]
+collection=db["Assignment"]
+result=collection.update_one({"name":"ar"},{"$set":{"name":"545
+k45654"}})
+print((result))
+
+4. D-Delete
+
+import pymongo
+client=pymongo.MongoClient("mongodb+srv://c5699:pythoncrud@pcrud.yvhau8o.
+mongodb.net/?retryWrites=true&w=majority")
+db=client["mydata"]
+collection=db["Assignment"]
+result=collection.delete_one({"name":"O546e"})
+print((result))
+
+
+
+
+ 
+
+1.	Write Program to demonstrate the use of variables using mathematical calculator.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple PHP Calculator</title>
+</head>
+<body>
+    <h2>Simple PHP Calculator</h2>
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <label for="num1">Number 1:</label>
+        <input type="number" name="num1" required><br>
+        <label for="num2">Number 2:</label>
+        <input type="number" name="num2" required><br>
+        <label for="operator">Operator:</label>
+        <select name="operator" required>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select><br>
+        <input type="submit" value="Calculate">
+    </form>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $num1 = $_POST['num1'];
+        $num2 = $_POST['num2'];
+        $operator = $_POST['operator'];
+
+        // Perform the calculation based on the selected operator
+        $result = 0;
+        switch ($operator) {
+            case '+':
+                $result = $num1 + $num2;
+                break;
+            case '-':
+                $result = $num1 - $num2;
+                break;
+            case '*':
+                $result = $num1 * $num2;
+                break;
+            case '/':
+                if ($num2 != 0) {
+                    $result = $num1 / $num2;
+                } else {
+                    $result = "Error: Division by zero!";
+                }
+                break;
+            default:
+                $result = "Error: Invalid operator!";
+        }
+
+        echo "<h3>Result: $num1 $operator $num2 = $result</h3>";
+    }
+    ?>
+</body>
+</html>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+q2.	Create Registration page and display all form content entered by end user on a separate webpage using PHP. (use most of the different HTML form controls and different types of variable in PHP).
+
+
+registration.php (The registration page):
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+</head>
+<body>
+    <h2>Registration Page</h2>
+    <form method="post" action="display_info.php">
+        <label for="fullname">Full Name:</label>
+        <input type="text" name="fullname" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age" required><br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender" value="Male" required>Male
+        <input type="radio" name="gender" value="Female" required>Female<br>
+
+        <label for="country">Country:</label>
+        <select name="country" required>
+            <option value="USA">USA</option>
+            <option value="Canada">Canada</option>
+            <option value="UK">UK</option>
+            <option value="Australia">Australia</option>
+            <option value="Other">Other</option>
+        </select><br>
+
+        <label for="hobbies">Hobbies:</label>
+        <input type="checkbox" name="hobbies[]" value="Reading">Reading
+        <input type="checkbox" name="hobbies[]" value="Gaming">Gaming
+        <input type="checkbox" name="hobbies[]" value="Cooking">Cooking
+        <input type="checkbox" name="hobbies[]" value="Traveling">Traveling<br>
+
+        <label for="bio">Bio:</label>
+        <textarea name="bio" rows="4" cols="50" required></textarea><br>
+
+        <label for="avatar">Profile Picture:</label>
+        <input type="file" name="avatar" required><br>
+
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
+
+display_info.php (The page to display the entered content):
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Information</title>
+</head>
+<body>
+    <h2>Registration Information</h2>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $fullname = $_POST['fullname'];
+        $email = $_POST['email'];
+        $age = $_POST['age'];
+        $gender = $_POST['gender'];
+        $country = $_POST['country'];
+        $hobbies = isset($_POST['hobbies']) ? implode(', ', $_POST['hobbies']) : 'None';
+        $bio = $_POST['bio'];
+        $avatar = $_FILES['avatar']['name']; // Assuming you handle file uploads properly
+
+        echo "<p><strong>Full Name:</strong> $fullname</p>";
+        echo "<p><strong>Email:</strong> $email</p>";
+        echo "<p><strong>Age:</strong> $age</p>";
+        echo "<p><strong>Gender:</strong> $gender</p>";
+        echo "<p><strong>Country:</strong> $country</p>";
+        echo "<p><strong>Hobbies:</strong> $hobbies</p>";
+        echo "<p><strong>Bio:</strong> $bio</p>";
+        echo "<p><strong>Profile Picture:</strong> $avatar</p>";
+    }
+    ?>
+</body>
+</html>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+3.	Create a PHP page for Registration page with MySQL connection.
+Before using this code, you need to create a MySQL database named your_database_name, and within that database, create a table named users. The table should have at least two columns - fullname and email.
+
+Also, replace 'your_username', 'your_password', and 'your_database_name' with your actual MySQL database credentials.
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page with MySQL</title>
+</head>
+<body>
+    <h2>Registration Page</h2>
+    <form method="post" action="">
+        <label for="fullname">Full Name:</label>
+        <input type="text" name="fullname" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" name="email" required><br>
+
+        <!-- Other form fields go here as needed -->
+
+        <input type="submit" name="submit" value="Register">
+    </form>
+
+    <?php
+    // Database connection parameters
+    $servername = "localhost";
+    $username = "your_username";
+    $password = "your_password";
+    $dbname = "your_database_name";
+
+    // Check if the form was submitted
+    if (isset($_POST["submit"])) {
+        // Get form data
+        $fullname = $_POST['fullname'];
+        $email = $_POST['email'];
+
+        // Create a connection to the MySQL database
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // Check if the connection was successful
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // SQL query to insert data into the database
+        $sql = "INSERT INTO users (fullname, email) VALUES ('$fullname', '$email')";
+
+        // Execute the query
+        if ($conn->query($sql) === TRUE) {
+            echo "<p>Registration successful!</p>";
+        } else {
+            echo "Error: " . $sql . "<br>" . $conn->error;
+        }
+
+        // Close the database connection
+        $conn->close();
+    }
+    ?>
+</body>
+</html>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.	Create a PHP page for login page with MySQL connection
+
+Before using this code, you need to create a MySQL database named your_database_name, and within that database, create a table named users. The table should have at least two columns - username and password.
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page with MySQL</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form method="post" action="">
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+
+        <input type="submit" name="login" value="Login">
+    </form>
+
+    <?php
+    // Database connection parameters
+    $servername = "localhost";
+    $username = "your_username";
+    $password = "your_password";
+    $dbname = "your_database_name";
+
+    // Check if the form was submitted
+    if (isset($_POST["login"])) {
+        // Get form data
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        // Create a connection to the MySQL database
+        $conn = new mysqli($servername, $username, $password, $dbname);
+
+        // Check if the connection was successful
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // Prepare the SQL query to check user credentials
+        $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
+        $stmt->bind_param("ss", $username, $password);
+        
+        // Execute the query
+        $stmt->execute();
+        
+        // Get the query result
+        $result = $stmt->get_result();
+        
+        // Check if the user exists and the credentials are correct
+        if ($result->num_rows == 1) {
+            echo "<p>Login successful!</p>";
+            // Redirect the user to the dashboard or some other page
+            // Example: header("Location: dashboard.php");
+        } else {
+            echo "<p>Invalid username or password. Please try again.</p>";
+        }
+
+        // Close the database connection
+        $conn->close();
+    }
+    ?>
+</body>
+</html>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.	Write a PHP program to Read from existing file and write to another file.
+
+<?php
+// Define the filenames
+$sourceFile = "source.txt";      // The existing file to read from
+$destinationFile = "destination.txt";  // The new file to write to
+
+// Check if the source file exists
+if (!file_exists($sourceFile)) {
+    die("Source file not found.");
+}
+
+// Read content from the source file
+$content = file_get_contents($sourceFile);
+
+// Check if the content was read successfully
+if ($content === false) {
+    die("Error reading from the source file.");
+}
+
+// Write content to the destination file
+$writeResult = file_put_contents($destinationFile, $content);
+
+// Check if the content was written successfully
+if ($writeResult === false) {
+    die("Error writing to the destination file.");
+}
+
+echo "Content successfully read from '$sourceFile' and written to '$destinationFile'.";
+?>
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1.	Write an AngularJS script to print details of bank (bank name, MICR code, IFC code, address etc.) in tabular form using ng-repeat. (5 Marks)
+
+
+<!DOCTYPE html>
+<html ng-app="bankApp">
+
+<head>
+  <title>Bank Details</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+
+<body ng-controller="bankCtrl">
+  <h2>Bank Details</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Bank Name</th>
+        <th>MICR Code</th>
+        <th>IFC Code</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="bank in banks">
+        <td>{{ bank.name }}</td>
+        <td>{{ bank.micrCode }}</td>
+        <td>{{ bank.ifcCode }}</td>
+        <td>{{ bank.address }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    angular.module('bankApp', [])
+      .controller('bankCtrl', function($scope) {
+        $scope.banks = [
+          {
+            name: 'Bank A',
+            micrCode: '123456',
+            ifcCode: 'ABC123',
+            address: '123 Main St, City A'
+          },
+          {
+            name: 'Bank B',
+            micrCode: '987654',
+            ifcCode: 'DEF456',
+            address: '456 Elm St, City B'
+          },
+          {
+            name: 'Bank C',
+            micrCode: '789012',
+            ifcCode: 'GHI789',
+            address: '789 Oak St, City C'
+          }
+          // Add more banks here if needed
+        ];
+      });
+  </script>
+</body>
+
+</html>
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2.	Write an AngularJS script for addition of two numbers using ng-init, ng-model & ng-bind. And also Demonstrate ng-show, ng-disabled, ng-click directives on button component. (5 Marks)
+
+
+
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-controller="myController">
+
+  <div>
+    Enter first number:
+    <input type="number" ng-model="number1">
+  </div>
+
+  <div>
+    Enter second number:
+    <input type="number" ng-model="number2">
+  </div>
+
+  <div>
+    Sum: <span ng-bind="sum"></span>
+  </div>
+
+  <button ng-show="showButton" ng-disabled="disableButton" ng-click="calculateSum()">Calculate Sum</button>
+
+  <script>
+    var app = angular.module('myApp', []);
+
+    app.controller('myController', function($scope) {
+      $scope.number1 = 0;
+      $scope.number2 = 0;
+      $scope.sum = 0;
+
+      $scope.calculateSum = function() {
+        $scope.sum = $scope.number1 + $scope.number2;
+      };
+
+      $scope.showButton = true;
+      $scope.disableButton = false;
+    });
+  </script>
+
+</body>
+
+</html>
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3.	Create a Node.js file that Insert Multiple Records in "student" table, and display the result object on console. (5 Marks)
+
+const { MongoClient } = require('mongodb');
+
+// Replace the MongoDB connection string with your actual MongoDB server URL
+const mongoURL = 'mongodb://localhost:27017';
+const dbName = 'your_database_name';
+
+// Sample student data to be inserted into the "student" collection
+const students = [
+  { name: 'John Doe', age: 20, city: 'New York' },
+  { name: 'Jane Smith', age: 22, city: 'Los Angeles' },
+  { name: 'Mike Johnson', age: 21, city: 'Chicago' },
+  { name: 'Emily Brown', age: 19, city: 'San Francisco' },
+];
+
+// Function to insert multiple records into the "student" collection
+const insertStudents = async () => {
+  const client = new MongoClient(mongoURL, { useUnifiedTopology: true });
+
+  try {
+    // Connect to the MongoDB server
+    await client.connect();
+
+    // Get the database
+    const db = client.db(dbName);
+
+    // Get the "student" collection
+    const collection = db.collection('student');
+
+    // Insert the students into the collection
+    const result = await collection.insertMany(students);
+
+    console.log(`${result.insertedCount} records inserted successfully.`);
+    console.log('Result object:', result);
+  } catch (error) {
+    console.error('Error inserting records:', error);
+  } finally {
+    // Close the connection to the MongoDB server
+    client.close();
+  }
+};
+
+// Call the function to insert students
+insertStudents();
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+f.js
+// Function to calculate the area of a rectangle
+function calculateArea(length, width) {
+    return length * width;
+  }
+  
+  // Function to display rectangle details on the console
+  function displayDetails(length, width) {
+    const area = calculateArea(length, width);
+    console.log('Rectangle Details:');
+    console.log('------------------');
+    console.log('Length:', length);
+    console.log('Width:', width);
+    console.log('Area:', area);
+  }
+  
+  
+
+  // Export the functions to make them accessible from other files
+  module.exports = {
+    calculateArea,
+    displayDetails,
+  };
+
+  const rectangle = require('./f.js');
+
+  rectangle.displayDetails(10, 18);
+  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1.	Write HTML code to design a web as per given specification. Divide the browser screen into two frames. The first frame will display the heading. Divide the second frame into two columns. The frame on the left should be name of cities consisting of hyperlinks. Clicking on any one of these hyperlinks will display related information in right hand side frame as shown below
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>City Information</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #heading-frame {
+            height: 50px;
+            background-color: #f1f1f1;
+            text-align: center;
+            padding: 10px;
+        }
+
+        #city-frame {
+            display: flex;
+            height: calc(100vh - 50px);
+        }
+
+        #city-list {
+            width: 50%;
+            background-color: #f9f9f9;
+            padding: 10px;
+        }
+
+        #city-info {
+            width: 50%;
+            padding: 10px;
+        }
+
+        #city-list ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #city-list ul li {
+            margin-bottom: 10px;
+        }
+
+        #city-list ul li a {
+            text-decoration: none;
+            color: #333;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="heading-frame">
+        <h1>IT companies in India</h1>
+    </div>
+    <!DOCTYPE html>
+
+
+    <div id="city-frame">
+        <div id="city-list">
+            <ul>
+                <h1>city</h1>
+                <h1 id="City">
+                    <li><a href="#pune" onclick="showpune('pune')">Pune</a></li>
+                    <li><a href="#mumbai" onclick="showmumbai('mumbai')">Mumbai</a></li>
+                    <li><a href="#bangalore "onclick="showbangalore('bangalore')" >Bangalore</a></li>
+            </ul>
+        </div>
+        <div id="info-frame">
+            <p id="city-info">Click on a city to display related information.</p>
+        </div>
+    </div>
+<script>
+    function showpune(city) {
+        var infoElement = document.getElementById('city-info');
+        infoElement.innerHTML = 'infoysis. \n persistent';
+   
+    }
+     function showmumbai(city) {
+            var infoElement = document.getElementById('city-info');
+            infoElement.innerHTML = 'Kpmg. \n TCS';
+
+        }
+
+          function showbangalore(city) {
+                var infoElement = document.getElementById('city-info');
+                infoElement.innerHTML = 'Bmw. \n Tata';
+
+            }
+</script>
+    
+</body>
+
+</html>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+2.	Write HTML code to design a website for Online Shopping. Design home page which consist of list of items each with hyperlink, clicking on which should display related information on separate web page. (Use external CSS to format each web page)
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Shopping</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Welcome to Online Shopping</h1>
+  <ul>
+    <li><a href="product1.html">Product 1</a></li>
+    <li><a href="product2.html">Product 2</a></li>
+    <li><a href="product3.html">Product 3</a></li>
+    <!-- Add more list items as needed -->
+  </ul>
+</body>
+</html>
+
+
+product.html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product 1 - Online Shopping</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Product 1</h1>
+  <p>This is the information about Product 1.</p>
+</body>
+</html>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3.	Design Aadhar card registration form and apply all the necessary validations on it.
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aadhaar Card Registration Form</title>
+  <script>
+    function validateForm() {
+      var name = document.forms["registrationForm"]["fullName"].value;
+      var gender = document.forms["registrationForm"]["gender"].value;
+      var dob = document.forms["registrationForm"]["dob"].value;
+      var address = document.forms["registrationForm"]["address"].value;
+      var mobile = document.forms["registrationForm"]["mobile"].value;
+      var email = document.forms["registrationForm"]["email"].value;
+
+      if (name == "") {
+        alert("Full Name must be filled out");
+        return false;
+      }
+
+      if (gender == "") {
+        alert("Please select a Gender");
+        return false;
+      }
+
+      if (dob == "") {
+        alert("Date of Birth must be filled out");
+        return false;
+      }
+
+      if (address == "") {
+        alert("Address must be filled out");
+        return false;
+      }
+
+      if (mobile == "") {
+        alert("Mobile Number must be filled out");
+        return false;
+      } else if (isNaN(mobile)) {
+        alert("Mobile Number must be numeric");
+        return false;
+      } else if (mobile.length != 10) {
+        alert("Mobile Number must be 10 digits");
+        return false;
+      }
+
+      if (email == "") {
+        alert("Email Address must be filled out");
+        return false;
+      } else {
+        var emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!emailPattern.test(email)) {
+          alert("Invalid Email Address");
+          return false;
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <h2>Aadhaar Card Registration Form</h2>
+  <form name="registrationForm" onsubmit="return validateForm()" action="#" method="post">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" name="fullName" required>
+
+    <br><br>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="">Select</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <br><br>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required>
+
+    <br><br>
+
+    <label for="address">Address:</label>
+    <textarea id="address" name="address" rows="4" required></textarea>
+
+    <br><br>
+
+    <label for="mobile">Mobile Number:</label>
+    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required>
+
+    <br><br>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+4.	 Write a program to display star shape on webpage using svg tag 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Star Shape Example</title>
+</head>
+<body>
+  <svg width="200" height="200">
+    <polygon points="100,10 40,198 190,78 10,78 160,198" style="fill: rgb(255, 0, 0); stroke: black; stroke-width: 2px;"></polygon>
+  </svg>
+</body>
+</html>
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+5.	Write a program to display Audio and Video file on webpage 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audio and Video Example</title>
+</head>
+<body>
+  <h2>Audio Example</h2>
+  <audio controls>
+    <source src="audio-file.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <h2>Video Example</h2>
+  <video width="400" controls>
+    <source src="video-file.mp4" type="video/mp4">
+    Your browser does not support the video element.
+  </video>
+</body>
+</html>
+
+
+
+ 
